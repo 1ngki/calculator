@@ -44,3 +44,24 @@ for (let i = 0; i < buttons.length; i++) {
     false,
   );
 }
+
+function getOperator(myOp) {
+  let theOp = '';
+  switch (myOp) {
+    case '+':
+      theOp = myOp;
+      break;
+    case '-':
+      theOp = myOp;
+      break;
+    case '/':
+      theOp = myOp;
+      break;
+    case '*':
+      theOp = myOp;
+      break;
+    default:
+      break;
+  }
+  return theOp;
+}
