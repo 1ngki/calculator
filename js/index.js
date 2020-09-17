@@ -73,3 +73,43 @@ function doOp(arr) {
   let answer = doOperation(list);
   return answer;
 }
+
+function doOperation(arr) {
+  let n1 = '',
+    n2 = '';
+
+  let opReached = false;
+  arr.map(function (item) {
+    if (item != op && opReached === false) {
+      n1 = n1 + item;
+    } else {
+      if (item === op) opReached = true;
+      else {
+        n2 = n2 + item;
+      }
+    }
+  });
+  if (opReached === true) {
+    let ans = calculate(n1, n2, op);
+    return ans;
+  } else return parseFloat(n1);
+}
+
+function calculate(num1, num2, op) {
+  let answer = '';
+  switch (op) {
+    case '+':
+      answer = parseFloat(num1) + parseFloat(num2);
+      break;
+    case '-':
+      answer = parseFloat(num1) - parseFloat(num2);
+      break;
+    case '/':
+      answer = parseFloat(num1) / parseFloat(num2);
+      break;
+    case '*':
+      answer = parseFloat(num1) * parseFloat(num2);
+      break;
+  }
+  return answer;
+}
