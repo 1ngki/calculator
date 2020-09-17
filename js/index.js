@@ -113,3 +113,15 @@ function calculate(num1, num2, op) {
   }
   return answer;
 }
+
+function doScr(arr) {
+  let myIndex = arr.lastIndexOf(op);
+  let list = arr.slice(myIndex + 1, arr.length);
+  return list.join('');
+}
+
+function reset() {
+  result = '';
+  entries = [];
+  op = '';
+}
