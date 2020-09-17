@@ -65,3 +65,11 @@ function getOperator(myOp) {
   }
   return theOp;
 }
+
+function doOp(arr) {
+  let myIndex = arr.lastIndexOf(op);
+  let list = arr.slice(myIndex, arr.length);
+  list.unshift(result);
+  let answer = doOperation(list);
+  return answer;
+}
